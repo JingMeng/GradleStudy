@@ -1,13 +1,17 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "29.0.1"
+    namespace 'com.zinc.zinclibrary'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    compileSdk 34
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdk 19
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -20,12 +24,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    
 
     }
 
-//    // 创建 风味 纬度
+//    // ??? ??? ???
 //    flavorDimensions('zinc', 'handsome')
-//    // 创建产品风味
+//    // ?????????
 //    productFlavors {
 //        minApi13{
 //            dimension 'zinc'
@@ -51,3 +56,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+

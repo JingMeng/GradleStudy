@@ -1,13 +1,17 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "29.0.1"
+    namespace 'com.zinc.matchingalibrary'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    compileSdk 34
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdk 19
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -20,6 +24,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    
 //        debug {
 //
 //        }
@@ -46,3 +51,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+
